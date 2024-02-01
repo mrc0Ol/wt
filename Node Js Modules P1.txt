@@ -1,0 +1,57 @@
+//Hello World
+console.log("Hello World");
+
+//Multiplication
+function myfun(x,y)
+{
+return x*y;
+}
+console.log (myfun(2,5));
+
+//Fibonacci
+function myfun(num1,num2)
+{
+console.log(num1+num2);
+console.log(num1-num2);
+console.log(num1*num2);
+console.log(num1/num2);
+}
+myfun(12,3);
+
+//callback function
+const message=function(){
+console.log("Hi I am Sainath");
+}
+setTimeout(message,3000);
+setTimeout(()=>{console.log("Calling from arrow function");
+},3000);
+
+//Javascript Callback
+function displayresult(some)
+{
+console.log(some);
+}
+function calculate(x,y,mycallback)
+{
+let sum=x+y;
+mycallback(sum);
+}
+calculate(5,10,displayresult);
+
+//Block Code
+var fs=require('fs');
+var data=fs.readFileSync('input.txt');
+console.log(data.toString());
+console.log("program ended");
+
+//Non Block Code
+var fs=require('fs');
+fs.readFile("input.txt",function(err,data){
+if(err)
+{
+return console.error(err);
+}
+console.log(data.toString());
+});
+console.log("program ended");
+
