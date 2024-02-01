@@ -1,0 +1,61 @@
+//Writing file
+var fs = require('fs');
+fs.writeFile('test.txt', 'Hello World!', function (err) {
+    if (err)
+        console.log(err);
+    else
+        console.log('Write operation complete.');
+});
+fs.readFile('test.txt', function (err, data) {
+    if (err) throw err;
+    console.log(data.toString());
+});
+fs.unlink('test.txt', function () {
+    console.log('delete operation complete.');
+});
+
+var fs = require('fs');
+fs.readFile('input.txt', function (err, data) {
+if (err) throw err; console.log(data.toString());
+});
+
+var fs = require('fs');
+fs.writeFile('test.txt', 'Hello World!', function (err) {
+if (err)
+console.log(err); else
+console.log('Write operation complete.');
+});
+
+var fs = require('fs');
+fs.appendFile('test.txt', ' Hey Hello', function (err) {
+if (err) throw err;
+console.log('Updated!');
+});
+
+var fs = require('fs');
+fs.rename('input.txt', 'myrenamedfile.txt', function (err) {
+if (err) throw err;
+console.log('File Renamed!');
+});
+
+var fs = require('fs');
+fs.unlink('myrenamedfile.txt', function (err) {
+if (err) throw err;
+console.log('File deleted!');
+});
+
+var fs = require('fs');
+fs.open('test.txt', 'r', function (err, fd) {
+if (err) {
+return console.error(err);
+}
+var buffr = new Buffer(10240); fs.read(fd, buffr, 0, buffr.length, 0,
+function (err, bytes) {
+if (err) throw err; if (bytes > 0) {
+console.log(buffr.slice(0, bytes).toString());
+}
+fs.close(fd, function (err) {
+if (err) throw err;
+});
+});
+});
