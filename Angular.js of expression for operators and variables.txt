@@ -1,0 +1,17 @@
+save as .html
+<!DOCTYPE html >
+    <html >
+        <head>
+            <script
+                src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        </head>
+        <body >
+            <h1>AngularJS Expression Demo:</h1>
+            <div ng-app>
+                2 + 2 = {{ 2 + 2 }} <br />
+                2 - 2 = {{ 2 - 2 }} <br />
+                2 * 2 = {{ 2 * 2 }} <br />
+                2 / 2 = {{ 2 / 2}}
+            </div>
+        </body>
+</html>
